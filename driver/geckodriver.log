@@ -1,0 +1,56 @@
+1618473609365	geckodriver	INFO	Listening on 127.0.0.1:52232
+1618473609421	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/8y/gdxjkg754sx3x58_1xhxcvsw0000gn/T/rust_mozprofileZBtKVe"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618473615588	Marionette	INFO	Listening on port 52252
+1618473615653	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1618473957386	Marionette	INFO	Stopped listening on port 52252
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618474867436	geckodriver	INFO	Listening on 127.0.0.1:57743
+1618474868445	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/8y/gdxjkg754sx3x58_1xhxcvsw0000gn/T/rust_mozprofileca1Lsk"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618474874640	Marionette	INFO	Listening on port 57754
+1618474912477	Marionette	INFO	Stopped listening on port 57754
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618474922079	geckodriver	INFO	Listening on 127.0.0.1:58018
+1618474922088	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/8y/gdxjkg754sx3x58_1xhxcvsw0000gn/T/rust_mozprofile7TJxT0"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618474924669	Marionette	INFO	Listening on port 58023
+1618474924744	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1618478338806	geckodriver	INFO	Listening on 127.0.0.1:55916
+1618478339809	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/8y/gdxjkg754sx3x58_1xhxcvsw0000gn/T/rust_mozprofileZKupCM"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618478342536	Marionette	INFO	Listening on port 55927
+1618478342596	Marionette	WARN	TLS certificate errors will be ignored for this session
+1618478503126	geckodriver	INFO	Listening on 127.0.0.1:56676
+1618478504131	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/8y/gdxjkg754sx3x58_1xhxcvsw0000gn/T/rust_mozprofileAKiRqj"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1618478506626	Marionette	INFO	Listening on port 56688
+1618478506709	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1618481680865	Marionette	INFO	Stopped listening on port 58023
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+console.error: "Error while calling actor 'pagestyle's method 'isPositionEditable'" "can't access dead object"
+console.error: "isPositionEditable@resource://devtools/server/actors/page-style.js:604:9\nhandler@resource://devtools/shared/protocol/Actor.js:172:37\nonPacket@resource://devtools/server/devtools-server-connection.js:379:58\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:68:16\n"
+console.error: (new Error("Protocol error (TypeError): can't access dead object from: server0.conn0.child3/pagestyle24 (resource://devtools/server/actors/page-style.js:604:9)", "resource://devtools/shared/protocol/Front.js", 361))
+JavaScript error: resource://devtools/server/actors/targets/browsing-context.js, line 1923: TypeError: can't access dead object
+JavaScript error: resource://devtools/server/actors/targets/browsing-context.js, line 1923: TypeError: can't access dead object
+JavaScript error: resource://devtools/server/actors/targets/browsing-context.js, line 1923: TypeError: can't access dead object
+1618544009701	Marionette	INFO	Stopped listening on port 56688
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618544011796	Marionette	INFO	Stopped listening on port 55927
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
