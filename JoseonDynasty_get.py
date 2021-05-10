@@ -3,6 +3,7 @@ from selenium import webdriver as wd
 from selenium import webdriver
 import json
 from time import sleep
+import re
 import os
 path_ = os.path.dirname(str(os.path.realpath(__file__)))
 options = webdriver.ChromeOptions()
@@ -63,6 +64,19 @@ def TheKingHty():
         f.write(json.dumps(dict_, ensure_ascii=False, indent="\t"))
         f.close()
 
+def filter_(text):
+    regex = re.compile("[^ㄱ-ㅣ가-힣|.|<|>|,|\"|0-9|\s|\(|\)|]+")
+
+    regex_1  = re.compile(r"\((.*?)\)")
+    regex_2  = re.compile(r"(.*?)\)")
+    retext = regex.sub(" ",text)
+    retext = regex_1.sub("",retext)
+    retext = regex_2.sub("",retext)
+    space_ = re.compile(",\s")
+    retext = space_.sub(",\n",str(retext))
+    retext =retext.replace(". ",".\n")
+    retext= str(retext).replace("1.","")
+    return retext 
 
 #왕 text 파일 크롤링
 def m_King_list():
@@ -104,23 +118,30 @@ def m_King_list():
                             title_text_name = driver.find_element_by_xpath("//*[@id='cont_area']/div[1]/div[1]/h3")
                             day   = driver.find_element_by_xpath("//*[@id='cont_area']/div[1]/ul[1]/li[6]/a")
                             year = driver.find_elements_by_xpath("//*[@id='cont_area']/div[1]/div[1]/div/span[1]/span/text()")
-                            f.write(f"{year.text} - {day.text}일\n")
+                            f.write(f"{year.text} - {day.text}\n")
                             f.write(f"<{title_text_name.text}>\n")
+                            f.write(f"\n")
                             text_2 = driver.find_element_by_xpath("//*[@id='cont_area']/div[1]/div[3]/div[1]/div/div")
                             text_ = text_2.find_elements_by_tag_name('p')
                             for t in text_:
-                                f.write(f"{t.text}\n")
+                                text_ = t
+                                re_text= filter_(str(text_.text))
+                                print(re_text)
+                                f.write(f"{re_text}\n")
                             f.write(f"\n")
                         except:
                             driver.refresh()
                             driver.execute_script(str(Link))
                             title_text_name = driver.find_element_by_xpath("//*[@id='cont_area']/div[1]/div[1]/h3")
-                            
+
                             f.write(f"<{title_text_name.text}>\n")
+                            f.write(f"\n")
                             text_2 = driver.find_element_by_xpath("//*[@id='cont_area']/div[1]/div[3]/div[1]/div/div")
                             text_ = text_2.find_elements_by_tag_name('p')
                             for t in text_:
-                                f.write(f"{t.text}\n")
+                                text_ = t
+                                re_text= filter_(str(text_.text))
+                                f.write(f"{re_text}\n")
                             f.write(f"\n")
 
                         driver.execute_script("window.history.go(-1)")
